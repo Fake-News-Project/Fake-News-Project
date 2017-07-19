@@ -1,5 +1,5 @@
 #  Identifying Fake News
-<br />
+
 ## Project Description
 
 As fake news is becoming more and more common on the internet, the risk of false stories spreading has increased. However, by looking at the difference in language between more reputable sites and fake news sites it may be possible to flag fake articles. This challenge includes scraping articles, engineering features, and developing a model to classify articles as fake news or reputable.
@@ -14,7 +14,7 @@ url of the article <br />
 * ### Outputs
 Binary decision (fake or not)
 
-<br />
+
 
 ## Dataset (on debate)
 
@@ -26,7 +26,7 @@ Binary decision (fake or not)
 * Determining 'Fake or not' of the training dataset: <br />
 Use OpenSources.co to distinguish between 'legitimate' and 'fake' news sources
 
-<br />
+
 ## Design
 #### Source
 * Considered mistrustful from the general audience
@@ -48,7 +48,7 @@ Use OpenSources.co to distinguish between 'legitimate' and 'fake' news sources
 #### More ideas
 * focus on political news only, in case we decide to web-scrap the articles
 
-<br />
+
 ## Reference
 [On The Media Fake News Handbook]("http://www.wnyc.org/story/breaking-news-consumer-handbook-fake-news-edition/") <br />
 [Opensources]("http://www.opensources.co/") <br />
