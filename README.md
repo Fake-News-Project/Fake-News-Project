@@ -26,6 +26,18 @@ Binary decision (fake or not)
 * Determining 'Fake or not' of the training dataset: <br />
 Use OpenSources.co to distinguish between 'legitimate' and 'fake' news sources
 
+## Day 2 Discussion ##
+
+-word frequency
+-length
+-grammar
+-bias vs fake
+-manual/ human moderators
+-probability of fake (already in outcome)
+-cross validating
+
+-satirical comedy – exclude the onion 
+-download dataset separately
 
 ## Design
 #### Source
