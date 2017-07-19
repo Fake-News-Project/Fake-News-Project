@@ -4,7 +4,7 @@
 
 As fake news is becoming more and more common on the internet, the risk of false stories spreading has increased. However, by looking at the difference in language between more reputable sites and fake news sites it may be possible to flag fake articles. This challenge includes scraping articles, engineering features, and developing a model to classify articles as fake news or reputable.
 
-<br />
+
 
 ## Inputs and Outputs
 * ### Inputs
