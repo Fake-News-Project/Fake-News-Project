@@ -45,6 +45,7 @@ Use OpenSources.co to distinguish between 'legitimate' and 'fake' news sources
 * url that ends unusually (eg. lo, to, com.co )
 * Website does not have “About Us” tab
 * Lack of author
+* author verified (blue arrow on FB and twitter) 
 
 
 #### Writing style
