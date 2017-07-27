@@ -2,6 +2,8 @@
 
 ## Project Description
 
+The increased use of the Internet to share news has allowed information to travel at record speeds. However, it has also led to the rise of fake news stories, a recent phenomenon that relies on the ability of an article to go "viral" without being vetted by an editorial team, as in traditional news sources. This project seeks to identify unreputable news sources and thus prevent the spread of false information. As such, we have developed a model that classifies articles on a 
+
 As fake news is becoming more and more common on the internet, the risk of false stories spreading has increased. However, by looking at the difference in language between more reputable sites and fake news sites it may be possible to flag fake articles. This challenge includes scraping articles, engineering features, and developing a model to classify articles as fake news or reputable.
 
 
