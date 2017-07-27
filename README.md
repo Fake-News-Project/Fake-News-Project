@@ -2,9 +2,24 @@
 
 ## Project Description
 
-The increased use of the Internet to share news has allowed information to travel at record speeds. However, it has also led to the rise of fake news stories, a recent phenomenon that relies on the ability of an article to go "viral" without being vetted by an editorial team, as in traditional news sources. This project seeks to identify unreputable news sources and thus prevent the spread of false information. As such, we have developed a model that classifies articles on a 
+The increased use of the Internet to share news has allowed information to travel at record speeds. However, it has also led to the rise of fake news stories, a recent phenomenon that relies on the ability of an article to go "viral" without being vetted by an editorial team, as in traditional news sources. This project seeks to identify unreputable news sources and thus prevent the spread of false information. As such, we have developed a model that classifies articles as reputable or not reputable. We examine the structure of the articles, including length, variety of word choice, and use of standard grammar, to determine the likelihood of being reputable or non-reputable. By flagging non-reputable sources, we hope to reduce the spread of highly biased or fabricated news. 
 
-As fake news is becoming more and more common on the internet, the risk of false stories spreading has increased. However, by looking at the difference in language between more reputable sites and fake news sites it may be possible to flag fake articles. This challenge includes scraping articles, engineering features, and developing a model to classify articles as fake news or reputable.
+## Data ## 
+
+To gather a high quality dataset, we wrote a scraper that downloads articles from a wide variety of news sources. Each team member (3) downloaded a set of articles from reputable and non-reputable news sources. The binary categorization for the news sources 
+
+-logistic regression
+-enural nets
+-library for unexpected
+-naive bayes 
+
+-6000 data
+-1500 as cross validation 
+## Model ## 
+
+Machine Learning Model (Unspervised, Supervised Learning Model) 
+
+## References ## 
 
 
 
