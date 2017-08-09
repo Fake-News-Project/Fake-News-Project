@@ -32,7 +32,7 @@ To gather a dataset, we wrote a web-scraper using python opensource ***Newspaper
 
 
 ## Prediction using various machine learning classifiers 
-(scikit-learn libraries in python)
+*** mainly scikit-learn libraries from python
 
 * Logistic regression
 * Neural network (MLPclassifier)
