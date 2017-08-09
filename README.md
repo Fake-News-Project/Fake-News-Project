@@ -31,7 +31,8 @@ To gather a dataset, we wrote a web-scraper using python opensource ***Newspaper
 #### Features were selected and scaled after generated
 
 
-## Prediction using various machine learning classifiers (scikit-learn libraries in python)
+## Prediction using various machine learning classifiers 
+(scikit-learn libraries in python)
 
 * Logistic regression
 * Neural network (MLPclassifier)
@@ -43,6 +44,6 @@ To gather a dataset, we wrote a web-scraper using python opensource ***Newspaper
 ## References 
 
 * http://newspaper.readthedocs.io/en/latest/
-* OpenSources.co: https://github.com/BigMcLargeHuge/opensources
+* https://github.com/BigMcLargeHuge/opensources
 * http://www.fakenewsai.com/
 * https://mediabiasfactcheck.com/fake-news/
