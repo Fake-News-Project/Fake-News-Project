@@ -3,47 +3,61 @@
 
 ## Project Description
 
-The increased use of the Internet or social medias to share news has allowed information to travel at record speeds. However, it has also led to the rise of fake news stories, a recent phenomenon that relies on the ability of an article to go "viral" without being vetted by an editorial team, as in traditional news sources. This project seeks to identify fake or highly-biased news articles and thus prevent the spread of false information. As such, we have developed a model that classifies articles as real and trusted, verses fake and highly-biased. To determine the authenticity of each article, we examine the existence of authors, various words or punctuation usage in the title the an article body, and so on. By flagging fake or highly-biased news articles, we hope to reduce their spreading. 
+The increased use of the Internet or social medias to share news has allowed information to travel at record speeds. However, it has also led to the rise of fake news stories, a recent phenomenon that relies on the ability of an article to go "viral" without being vetted by an editorial team, as in traditional news sources. This project seeks to identify fake or highly-biased news articles to help prevent the spread of false information. More specially, we implemented a program to examine the existence of authors, words and punctuation usage in titles, and article bodies, and used machine learning algorithms to identify news from unreliable sources. 
 
 
-## Building data 
+## Building Dataset 
+Our final dataset contains 1473 articles from both reliable and unreliable sources.
 
-To gather a dataset, we wrote a web-scraper using python opensource ***Newspaper***(http://newspaper.readthedocs.io/en/latest/) that downloads articles from a wide variety of news sources. 
-* The number of total real news websites scraped is 42 and that of fake ones is 12.
+#### 1. Collect Data
+Our data collection scripts:
 
-* Real news websites scraped are:
-['msnbc', 'nbcnews', 'politico', 'foxnews', 'nytimes', 'reuters', 'abc', 'bbc', 'cnn', 'newyorker', 'cbsnews', 'npr']
+* _Step1_CollectData_Hyesoo.ipynb_ (Hyesoo's script)
+* _Step1_CollectData_Jinmei_FakeNews.ipynb_ and _Step1_CollectData_Jinmei_RealNews.ipynb_ (Jinmei's script')
 
-* Fake news websites scraped are:
-['24wpn', 'beforeitsnews', 'readconservatives', 'newsbbc', 'now8news', 'americanfreepress', 'nephef', 'nationonenews', 'infostormer', 'Conservativedailypost', 'donaldtrumppotus45', 'ladylibertysnews', 'interestingdailynews', 'president45donaldtrump', 'openmagazines', 'krbcnews', 'bizstandardnews', 'bipartisanreport', 'local31news', 'nbcnews', 'CivicTribune', 'politicono', 'redcountry', 'AmericanFlavor', 'ddsnewstrend', 'Clashdaily', 'realnewsrightnow', 'wordpress', 'reagancoalition', 'lastdeplorables', 'Americannews', 'aurora-news', 'thedcgazette', 'politicalo', 'newswithviews', 'pamelageller', 'Bighairynews', 'ABCnews', 'sputniknews', 'prntly', 'Americanoverlook', 'majorthoughts']
+used the Python library [***Newspaper***](http://newspaper.readthedocs.io/en/latest/) that collects information of articles from a wide variety of news sources. 
 
-* After cleaning and balancing the data, we had 1473 articles for each category.
+We have collected news from 12 reliable news sources and 42 unreliable news websites. 
+* The reliable sources include **_msnbc_**, **_nbcnews_**, **_politico_**, **_foxnews_**, **_nytimes_**, **_reuters_**, **_abc_**, **_bbc_**, **_cnn_**, **_newyorker_**, **_cbsnews_**, and **_npr_**.
+* The unreliable news sources we used are
+**_24wpn_**, **_beforeitsnews_**, **_readconservatives_**, **_newsbbc_**, **_now8news_**, **_americanfreepress_**, **_nephef_**, **_nationonenews_**, **_infostormer_**, **_Conservativedailypost_**, **_donaldtrumppotus45_**, **_ladylibertysnews_**, **_interestingdailynews_**, **_president45donaldtrump_**, **_openmagazines_**, **_krbcnews_**, **_bizstandardnews_**, **_bipartisanreport_**, **_local31news_**, **_nbcnews_**, **_CivicTribune_**, **_politicono_**, **_redcountry_**, **_AmericanFlavor_**, **_ddsnewstrend_**, **_Clashdaily_**, **_realnewsrightnow_**, **_wordpress_**, **_reagancoalition_**, **_lastdeplorables_**, **_Americannews_**, **_aurora-news_**, **_thedcgazette_**, **_politicalo_**, **_newswithviews_**, **_pamelageller_**, **_Bighairynews_**, **_ABCnews_**, **_sputniknews_**, **_prntly_**, **_Americanoverlook_**, and **_majorthoughts_**.
+
+#### 2. Clean Data
+
+Data collected with _Step1_CollectData_Hyesoo.ipynb_ use the script, _Step2_CleanData_Hyesoo.ipynb_, to remove short articles and errors.
+
+#### 3. Merge Data
+
+Data collected by Hyesoo and Jinmei are merged with the script, _Step3_MergeData.ipynb_. It also includes cleaning procedure for data collected by Jinmei.
 
 
 ## Feature engineering
 
-#### Features generated:
-* Existence of authors
-* Exaggerating punctuations used in title
-* Rate of uppercases used in title
-* TF-IDF features on article body text
+Features include
+* existence of authors
+* exaggerating punctuations used in titles
+* rate of uppercases used in titles
+* TF-IDF values generated with text body
 
-#### Features were selected and scaled after generated
+The first three features were generated using _Step4_GenerateExtraFeatures.ipynb_ script. They were rescaled with TF-IDF features afterwards.
 
 
-## Prediction using various machine learning classifiers 
-#### Used scikit-learn libraries from python
+## Predicting fake news with various machine learning classifiers 
+Models used include
 
-* Logistic regression
-* Neural network (MLPclassifier)
 * Naive Bayes
+* Logistic Regression
+* Neural Network (MLPclassifier)
 * Random Forest
-* SVM
+* Support Vector Machine
+
+See script _Step5_ExtractFeatures_Predict_w_MachineLearning.ipynb_ for details.
+## Results
+We are able to obtain > 92 % prediction accuracy within our dataset.
 
 
 ## References 
-
-* http://newspaper.readthedocs.io/en/latest/
+Lists of fake news websites:
 * https://github.com/BigMcLargeHuge/opensources
 * http://www.fakenewsai.com/
 * https://mediabiasfactcheck.com/fake-news/
