@@ -7,7 +7,7 @@ The increased use of the Internet or social medias to share news has allowed inf
 
 
 ## Building Dataset 
-Our final dataset contains 1473 articles from both reliable and unreliable sources.
+Our final dataset (**_balanced_data.csv_** under data directory) contains 1473 articles from reliable sources and 1473 from unreliable sources. Items from reliable sources have attribute _authenticity_ as 0, while entities from ureliable sources have _authenticity_ of 1. 
 
 #### 1. Collect Data
 Our data collection scripts:
