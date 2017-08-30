@@ -1,17 +1,24 @@
 from flask import Flask
 from flask import request
 from flask import render_template
-import check_an_article
-# from check_an_article import check_authenticity, concat_3features
-# import pandas as pd
-# import numpy as np
-# import scipy as sp
-# from flask import render_template
-# import dill as pickle
-# import string
-# from nltk.stem.porter import PorterStemmer
-# from nltk import word_tokenize
 
+import nltk
+from nltk.stem.porter import PorterStemmer
+from nltk import word_tokenize
+
+stemmer = PorterStemmer()
+def stem_tokens(tokens, stemmer):
+    return [stemmer.stem(x) for x in tokens]
+
+
+def tokenize_stemmer(text):
+    tokens = word_tokenize(text)
+    # option to include punctuation or not
+    #tokens = [i for i in tokens if i not in string.punctuation]
+    stems = stem_tokens(tokens, stemmer)
+    return stems
+
+from check_an_article import check_authenticity
 
 
 
@@ -23,7 +30,8 @@ def index():
 
 @app.route('/', methods=['POST'])
 def index2():
-    if check_authenticity(str(request.form['url'])) > 0.5:
+
+    if check_authenticity(request.form['url']) > 0.5:
         return render_template("fake.html")
     else:
         return render_template("real.html")
