@@ -55,6 +55,10 @@ See script _Step5_ExtractFeatures_Predict_w_MachineLearning.ipynb_ for details.
 ## Results
 We are able to obtain > 92 % prediction accuracy within our dataset.
 
+## User Interface
+We have developed a simple user interface that predicts the authenticity of an article of interest.
+In detail, running the file 'run_final.py' in flask_api folder will generate a local http address, in which the user can submit the url of an article, and the model predicts the article's authenticity.
+
 
 ## References 
 Lists of fake news websites:
