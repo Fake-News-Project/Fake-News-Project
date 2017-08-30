@@ -131,16 +131,16 @@ def compute_score(url):
     print("Y_test_pred_LR: ", Y_test_pred_LR[0])
 
     if Y_test_pred_LR[0] == 0:
-        return "This is a true news article."
+        return "This is a true news article"
     else:
-        return "This is a fake news article."
+        return "This is a fake news article"
 
 def compute_score_test(url):
     print(url)
     Y = 0
     if Y == 0:
-        return "This is a true news article."
+        return "this is true"
     else:
-        return "This is a fake news article."
+        return "this is fake"
 #url = 'http://www.cnn.com/2017/07/18/politics/obamacare-fail-trump/index.html'
 #compute_score(url)

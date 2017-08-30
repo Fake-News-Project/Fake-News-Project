@@ -1,5 +1,7 @@
-additions
+test_ideas.ipynb
 data/indv_file
+.ipynb_checkpoints
+presentation
+additions
 flask_api/.idea
 flask_api/__pycache__
-presentation

@@ -7,16 +7,16 @@ app = Flask(__name__)
 
 @app.route('/')
 def my_form():
-  return render_template("get-form.html")
+  return render_template("my-form.html")
 
 @app.route('/', methods=['POST'])
 def my_form_post():
-  
+
   url = request.form['url']
-  # function to tell whether the url gives a fake or real news
-  result = compute_score(url)
-  return render_template("post-form.html", result=result)
+  # function to compute the score for the probability of being fake news
+  # processed_text = url.upper()
+  test = compute_score(str(url))
+  return test
 
 if __name__ == '__main__':
   app.run()
-
